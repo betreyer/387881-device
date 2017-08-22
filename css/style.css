@@ -1,0 +1,27 @@
+body {
+ font-size: 18px;
+ line-height: 1.2em;
+ color: #000;
+ font-weight: 900;
+ font-family: "Gilroy", sans-serif;
+}
+
+.category-name {
+    font-size: 18px;
+    line-height: 1.2em;
+    color: #000;
+    font-weight: 900;
+    font-family: "Gilroy", sans-serif;
+}
+
+.add-header {
+  font-size: 47px;
+  line-height: 1.2em;
+  color: #000;
+  font-weight: 900;
+  font-family: "Gilroy", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
