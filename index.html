@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Device - главная</title>
+  <link rel="stylesheet" href="css/normalize.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
   <header class="main-header">
-    <a class="main-header-logo">
+    <a class="main-header-logo" tabindex="0">
       <img class="main-header-logo" src="img/main-header-logo.svg" width="169" height="54" alt="Логотип">
     </a>
     <div class="main-adding-nav">
@@ -16,8 +17,7 @@
           <form action="" method="get" class="nav-form">
             <label class="visually-hidden" for="searchSite">Поиск</label>
             <input type="search" placeholder="Поиск по сайту" class="nav-search">
-            <label class="zero-size searchIcon" for="searchSend">Найти</label>
-            <input type="submit" class="visually-hidden" name="send" value="Отправить" id="searchSend">
+            <input type="submit" class="invisible" name="send" value="Найти" id="searchSend" tabindex="0">
           </form>
         </li>
         <li class="list-pt auth"><a class="adding-nav-link auth-into" href="authorisation.html">Войти</a></li>
@@ -27,9 +27,9 @@
       </ul>
     </div>
     <nav class="main-header-nav">
-      <ul class="header-nav-list">
-        <li class="nav-pt list-catalog">Каталог товаров
-          <ol>
+      <ul class="header-cat-list">
+        <li class="nav-pt list-catalog"><a tabindex="0">Каталог товаров</a>
+          <ol class="nav-catalog">
             <li class="catalog-pt catalog-main">
               <a href="#">Виртуальная реальность</a>
             </li>
@@ -77,8 +77,7 @@
           Самая длинная палка для селфи доступна в нашем магазине.
           Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
           </p>
-          <div class="goods-detail"><a href="#" class="detail-link-style ">Подробнее</a>
-          </div>
+          <a href="#" class="detail-link-style">Подробнее</a>
           <table class="detail-table table-stick">
             <tr class="detail-table-row detail-value">
               <td class="detail-table-data"><b>8,5 м</b></td>
@@ -107,8 +106,7 @@
           <span class="goods-count">02</span>
           <p class="goods-description-paragraph">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.
           </p>
-          <div class="goods-detail"><a href="#" class="detail-link-style">Подробнее</a>
-          </div>
+          <a href="#" class="detail-link-style">Подробнее</a>
           <table class="detail-table table-watch">
             <tr class="detail-table-row detail-value">
               <td class="detail-table-data"><b>48 часов</b></td>
@@ -133,7 +131,7 @@
           <span class="goods-count">03</span>
           <p class="goods-description-paragraph">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.
           </p>
-          <div class="goods-detail"><a href="#" class="detail-link-style">Подробнее</a></div>
+          <a href="#" class="detail-link-style">Подробнее</a>
             <table class="detail-table table-drone">
               <tr class="detail-table-row detail-value">
                 <td class="detail-table-data"><b>800 м</b></td>
@@ -170,49 +168,49 @@
     <div class="main-categories">
       <ul class="main-categories-list">
         <li class="main-category">
-          <a href="#">
+          <a class="category-link" href="#">
             <figure class="category-icon">
-              <img src="img/main-categories-virtual.svg" width="97" height="55" alt="Виртуальная реальность">
+              <img class="category-img" src="img/main-categories-virtual.svg" width="97" height="55" alt="Виртуальная реальность">
             </figure>
             <h3 class="category-name">Виртуальная реальность</h3>
           </a>
         </li>
         <li class="main-category">
-          <a href="#">
+          <a class="category-link" href="#">
             <figure class="category-icon">
-              <img src="img/main-categories-monopods.svg" width="86" height="117" alt="Моноподы">
+              <img class="category-img" src="img/main-categories-monopods.svg" width="86" height="117" alt="Моноподы">
             </figure>
             <h3 class="category-name">Моноподы<br>для селфи</h3>
           </a>
         </li>
         <li class="main-category">
-          <a href="#">
+          <a class="category-link" href="#">
             <figure class="category-icon">
-              <img src="img/main-categories-action-cameras.svg" width="71" height="87" alt="Экшн-камеры">
+              <img class="category-img" src="img/main-categories-action-cameras.svg" width="71" height="87" alt="Экшн-камеры">
             </figure>
             <h3 class="category-name">Экшн-камеры</h3>
           </a>
         </li>
         <li class="main-category">
-          <a href="#">
+          <a class="category-link" href="#">
             <figure class="category-icon">
-              <img src="img/main-categories-fitness-bracers.svg" width="107" height="65" alt="Фитнес-браслеты">
+              <img class="category-img" src="img/main-categories-fitness-bracers.svg" width="107" height="65" alt="Фитнес-браслеты">
             </figure>
             <h3 class="category-name">Фитнес-браслеты</h3>
           </a>
         </li>
         <li class="main-category">
-          <a href="#">
+          <a class="category-link" href="#">
             <figure class="category-icon">
-              <img src="img/main-categories-smart-watches.svg" width="56" height="98" alt="Умные-часы">
+              <img class="category-img" src="img/main-categories-smart-watches.svg" width="56" height="98" alt="Умные-часы">
             </figure>
             <h3 class="category-name">Умные часы</h3>
           </a>
         </li>
         <li class="main-category">
-          <a href="#">
+          <a class="category-link" href="#">
             <figure class="category-icon">
-              <img src="img/main-categories-drones.svg" width="132" height="69" alt="Квадрокоптеры">
+              <img class="category-img" src="img/main-categories-drones.svg" width="132" height="69" alt="Квадрокоптеры">
             </figure>
             <h3 class="category-name">Квадрокоптеры</h3>
           </a>
@@ -226,16 +224,16 @@
         <form class="add-controls-form" method="get" action="">
           <ul class="controls-list">
             <li class="controls-variant">
-              <input class="visually-hidden" type="radio" name="additionalInfoPage" value="delievery" id="delievery" checked>
-              <label for="delievery">Доставка</label>
+              <input class="visually-hidden control-add" type="radio" name="additionalInfoPage" value="delievery" id="delievery" checked tabindex="0">
+              <label class="detail-link-style controls-name" for="delievery">Доставка</label>
             </li>
             <li class="controls-variant">
-              <input class="visually-hidden" type="radio" name="additionalInfoPage" value="guarantee" id="guarantee">
-              <label for="guarantee">Гарантия</label>
+              <input class="visually-hidden control-add" type="radio" name="additionalInfoPage" value="guarantee" id="guarantee" tabindex="0">
+              <label class="detail-link-style controls-name" for="guarantee">Гарантия</label>
             </li>
             <li class="controls-variant">
-              <input class="visually-hidden" type="radio" name="additionalInfoPage" value="credit" id="credit">
-              <label for="credit">Кредит</label>
+              <input class="visually-hidden control-add" type="radio" name="additionalInfoPage" value="credit" id="credit" tabindex="0">
+              <label class="detail-link-style controls-name" for="credit">Кредит</label>
             </li>
           </ul>
         </form>
@@ -256,7 +254,7 @@
 
       <div class="main-add-info info-guarantee">
         <h3 class="add-header">Кредит</h3>
-        <p class="add-paragrap">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется</p>
+        <p class="add-paragraph">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется</p>
         <!-- Неконтентное изображение - в бекграунд -->
         <!-- Всплывающая форма -->
       </div>
