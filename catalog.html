@@ -6,39 +6,30 @@
   <link rel="stylesheet" href="css/normalize.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
-<body>
+<body class="catalog-page">
   <header class="main-header">
-    <a class="main-header-logo" href="index.html">
+    <a class="main-header-logo" tabindex="0">
       <img class="main-header-logo" src="img/main-header-logo.svg" width="169" height="54" alt="Логотип">
     </a>
     <div class="main-adding-nav">
       <ul class="nav-list">
         <li class="list-pt">
-          <form action="" method="get" class="adding-nav-form">
+          <form action="" method="get" class="nav-form">
             <label class="visually-hidden" for="searchSite">Поиск</label>
             <input type="search" placeholder="Поиск по сайту" class="nav-search">
-            <label class="searchIcon" for="searchSend">Найти</label>
-            <input type="submit" class="visually-hidden" name="send" value="Отправить" id="searchSend">
+            <input type="submit" class="invisible" name="send" value="Найти" id="searchSend" tabindex="0">
           </form>
         </li>
-        <li class="list-pt auth">
-          <a class="adding-nav-link auth-into" href="authorisation.html">Валентин Петухов</a>
-        </li>
-        <li class="list-pt">
-          <a class="adding-nav-link auth-exit" href="#">Выйти</a>
-        </li>
-        <li class="list-pt">
-          <a class="adding-nav-link adding-compare" href="#">Сравнить</a>
-        </li>
-        <li class="list-pt">
-          <a class="adding-nav-link adding-cart" href="cart.html">Корзина</a>
-        </li>
+        <li class="list-pt auth"><a class="adding-nav-link auth-into" href="authorisation.html">Валентин Петухов</a></li>
+        <li class="list-pt"><a class="adding-nav-link auth-exit" href="#">Выйти</a></li>
+        <li class="list-pt"><a class="adding-nav-link adding-compare" href="#">Сравнить</a></li>
+        <li class="list-pt"><a class="adding-nav-link adding-cart" href="cart.html">Корзина</a></li>
       </ul>
     </div>
     <nav class="main-header-nav">
-      <ul class="header-nav-list">
-        <li class="nav-pt list-catalog">Каталог товаров
-          <ol>
+      <ul class="header-cat-list">
+        <li class="nav-pt list-catalog"><a tabindex="0">Каталог товаров</a>
+          <ol class="nav-catalog">
             <li class="catalog-pt catalog-main">
               <a href="#">Виртуальная реальность</a>
             </li>
@@ -71,7 +62,7 @@
     <div class="breadcrumbs">
       <ul class="breadcrumbs-list">
         <li class="crumb">
-          <a class="crumb-link" href="#">Главная</a>
+          <a class="crumb-link" href="index.html">Главная</a>
         </li>
         <li class="crumb">
           <a class="crumb-link" href="#">Каталог товаров</a>
@@ -86,13 +77,13 @@
         <div class="filters-header">Фильтр:</div>
         <form class="filters-form" method="get" action="">
           <fieldset class="filters-fieldset filters-cost">
+            <legend class="filters-legend">Стоимость</legend>
             <ul class="cost-list">
               <li class="cost-value">
-                <legend class="filters-legend">Стоимость</legend>
                 <label class="visually-hidden" for="priceRange" >Фильтр стоимости товара</label>
                 <input type="range" min="0" max="10000" value="5000" step="1000" name="price-range" id="priceRange" class="price-range">
-                <span class="min-price">0</span>
-                <span class="max-price">5000</span>
+                <span class="price min-price">0</span>
+                <span class="price max-price">5000</span>
               </li>
             </ul>
           </fieldset>
@@ -100,23 +91,23 @@
             <legend class="filters-legend">Цвет</legend>
             <ul class="color-list">
               <li class="color-value">
-                <input type="checkbox" name="black-color" id="blackColor" value="black" checked>
+                <input class="visually-hidden" type="checkbox" name="black-color" id="blackColor" value="black" checked>
                 <label class="filters-label" for="blackColor">Черный</label>
               </li>
               <li class="color-value">
-                <input type="checkbox" name="white-color" id="whiteColor" value="white">
+                <input class="visually-hidden" type="checkbox" name="white-color" id="whiteColor" value="white">
                 <label class="filters-label" for="whiteColor">Белый</label>
               </li>
               <li class="color-value">
-                <input type="checkbox" name="blue-color" id="blueColor" value="blue" checked>
+                <input class="visually-hidden" type="checkbox" name="blue-color" id="blueColor" value="blue" checked>
                 <label class="filters-label" for="blueColor">Синий</label>
               </li>
               <li class="color-value">
-                <input type="checkbox" name="red-color" id="redColor" value="red" checked>
+                <input class="visually-hidden" type="checkbox" name="red-color" id="redColor" value="red" checked>
                 <label class="filters-label" for="redColor">Красный</label>
               </li>
               <li class="color-value">
-                <input type="checkbox" name="rose-color" id="roseColor" value="rose">
+                <input class="visually-hidden" type="checkbox" name="rose-color" id="roseColor" value="rose">
                 <label class="filters-label" for="roseColor">Розовый</label>
               </li>
             </ul>
@@ -125,17 +116,17 @@
             <legend class="filters-legend">Bluetooth</legend>
             <ul class="bth-list">
               <li class="bth-value">
-                <input type="radio" name="bluetooth" id="bluetoothIs" checked value="1">
+                <input class="visually-hidden" type="radio" name="bluetooth" id="bluetoothIs" checked value="1">
                 <label class="filters-label" for="bluetoothIs">Есть</label>
               </li>
               <li class="bth-value">
-                <input type="radio" name="bluetooth" id="bluetoothNo" value="1">
+                <input class="visually-hidden" type="radio" name="bluetooth" id="bluetoothNo" value="1">
                 <label class="filters-label" for="bluetoothNo">Нет</label>
               </li>
             </ul>
           </fieldset>
           <div class="btn-container">
-            <input type="submit" class="detail-link-style show-btn" value="Показать">
+            <input type="submit" class="button-view" value="Показать">
           </div>
         </form>
       </section>
@@ -147,23 +138,23 @@
           <ul class="sort-list">
             <li class="sort-pt">
               <input class="visually-hidden" type="radio" name="sort-type" value="price" id="sortPrice" checked>
-              <label for="sortPrice">По цене</label>
+              <label class="sort-name" for="sortPrice">По цене</label>
             </li>
             <li class="sort-pt">
               <input class="visually-hidden" type="radio" name="sort-type" value="type" id="sortType">
-              <label for="sortType">По типу</label>
+              <label class="sort-name" for="sortType">По типу</label>
             </li>
             <li class="sort-pt">
               <input class="visually-hidden" type="radio" name="sort-type" value="popular" id="sortPopular">
-              <label for="sortPopular">По популярности</label>
+              <label class="sort-name" for="sortPopular">По популярности</label>
             </li>
             <li class="sort-pt">
               <input class="visually-hidden" type="radio" name="sort-gross" value="upper" id="sortUpper">
-              <label class="visually-hidden" for="sortUpper">По возрастанию</label>
+              <label class="visually-hidden price-upper" for="sortUpper">По возрастанию</label>
             </li>
             <li class="sort-pt">
               <input class="visually-hidden" type="radio" name="sort-gross" value="lowwer" id="sortLowwer">
-              <label class="visually-hidden" for="sortUpper">По убыванию</label>
+              <label class="visually-hidden price-lower" for="sortUpper">По убыванию</label>
             </li>
           </ul>
         </form>
@@ -173,56 +164,56 @@
         <h2 class="visually-hidden">Товарные предложения</h2>
         <article class="goods-position goods-amatour">
           <figure class="goods-figure">
-            <img class="goods-image" src="img/amatour-selfie-stick.png" alt="Любительская селфи-палка">
+            <img class="goods-image" src="img/amatour-selfie-stick.png" alt="Любительская селфи-палка" width="360" height="380">
             <h3 class="goods-name">
               <a href="#">Любительская селфи-палка</a>
             </h3>
             <span class="goods-price"><b>500 руб.</b></span>
           </figure>
           <div class="goods-cart-ctnr">
-            <button type="button" class="detail-link-style goods-cart">В корзину</button>
+            <button type="button" class="button-view">В корзину</button>
             <button type="button" class="goods-compare">Добавить к сравнению</button>
           </div>
         </article>
 
         <article class="goods-position goods-prof">
           <figure class="goods-figure">
-            <img class="goods-image" src="img/prof-selfie-stick.png" alt="Профессиональная селфи-палка">
+            <img class="goods-image" src="img/prof-selfie-stick.png" alt="Профессиональная селфи-палка" width="360" height="380">
             <h3 class="goods-name">
               <a href="#">Профессиональная селфи-палка</a>
             </h3>
             <span class="goods-price"><b>1 500 руб.</b></span>
           </figure>
           <div class="goods-cart-ctnr">
-            <button type="button" class="detail-link-style goods-cart">В корзину</button>
+            <button type="button" class="button-view">В корзину</button>
             <button type="button" class="goods-compare">Добавить к сравнению</button>
           </div>
         </article>
 
         <article class="goods-position goods-unsink">
           <figure class="goods-figure">
-            <img class="goods-image" src="img/unsink-selfie-stick.png" alt="Непотопляемая селфи-палка">
+            <img class="goods-image" src="img/unsink-selfie-stick.png" alt="Непотопляемая селфи-палка" width="360" height="380">
             <h3 class="goods-name">
               <a href="#">Непотопляемая селфи-палка</a>
             </h3>
             <span class="goods-price"><b>2 500 руб.</b></span>
           </figure>
           <div class="goods-cart-ctnr">
-            <button type="button" class="detail-link-style goods-cart">В корзину</button>
+            <button type="button" class="button-view">В корзину</button>
             <button type="button" class="goods-compare">Добавить к сравнению</button>
           </div>
         </article>
 
         <article class="goods-position goods-follow">
           <figure class="goods-figure">
-            <img class="goods-image"  src="img/follow-selfie-stick.png" alt="Селфи-палка 'Следуй за мной'">
+            <img class="goods-image"  src="img/follow-selfie-stick.png" alt="Селфи-палка 'Следуй за мной'" width="360" height="380">
             <h3 class="goods-name">
               <a href="#">Селфи-палка "Следуй за мной"</a>
             </h3>
             <span class="goods-price"><b>4 900 руб.</b></span>
           </figure>
           <div class="goods-cart-ctnr">
-            <button type="button" class="detail-link-style goods-cart">В корзину</button>
+            <button type="button" class="button-view">В корзину</button>
             <button type="button" class="goods-compare">Добавить к сравнению</button>
           </div>
         </article>
@@ -255,7 +246,9 @@
   <footer class="main-footer">
     <div class="footer-adress">
       <div class="footer-logo">
-        <img src="img/main-footer-adress-logo.svg" alt="Логотип">
+        <a class="footer-logo-link" href="#">
+          <img src="img/main-footer-adress-logo.svg" alt="Логотип">
+        </a>
       </div>
       <p class="footer-adress-paragraph">г. Москва, ул. Строителей, 15</p>
     </div>
@@ -276,13 +269,13 @@
       <div class="footer-social">
         <ul class="social-list">
           <li class="social-button">
-            <a href="facebook.com" class="facebook">Facebook</a>
+            <a href="facebook.com" class="zero-size facebook">Facebook</a>
           </li>
           <li class="social-button">
-            <a href="instagram.com" class="instagram">Instagram</a>
+            <a href="instagram.com" class="zero-size instagram">Instagram</a>
           </li>
           <li class="social-button">
-            <a href="twitter.com" class="twitter">Twitter</a>
+            <a href="twitter.com" class="zero-size twitter">Twitter</a>
           </li>
         </ul>
       </div>
@@ -304,11 +297,12 @@
       <div class="footer-tel">
         <a class="footer-tel-link" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
       </div>
-      <div class="academy-logo">
-        <a href="https://htmlacademy.ru/intensive/htmlcss" class="academy-logo">
-          <img src="img/html-academy-logo.svg" alt="Логотип htmlacademy">
+
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="academy-logo-link">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
+            <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.473,8.017l13.43-7.99l0.042-0.025V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 L13.494,5.23l-0.087,0.05l-0.088-0.056v0.109L1.925,12.118V3.147l11.548-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.014,1.415l5.904,3.513l-0.86,0.507l-5.03-2.992l-0.014,1.415l3.827,2.275l-0.782,0.523l-3.031-1.787 l-0.014,1.413l1.853,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.016,1.044L5.41,18.234L5.395,19.65 l7.979,4.795l0.018,1.076l-7.973-4.74l-0.013,1.414l8.021,4.822l0.046,0.025l8.143-4.872l-0.011-5.177l3.415-2.036v10.021 L13.472,31.85L1.925,24.979V15.127z"/>
+          </svg>
         </a>
-      </div>
     </div>
   </footer>
 </body>
